@@ -34,8 +34,8 @@ body {
             color: gray;
         }
         #name{
-            font-size: 10px;
-            color: pink;
+            font-size: 30px;
+            color: rgb(29, 46, 200);
         }
         }
 
@@ -58,10 +58,10 @@ section{
 #connect ul li{
     
     width: 10px;
-    height: 8px;
+    height: 15px;
     border-radius: 11%;
     margin: 9px;
-    padding: 9px;
+    padding: 20px;
     font-size: smaller;
 }
 h1{
@@ -85,8 +85,13 @@ h2 {
 #experience ul li{
     background: cce5ff;
     color: darkblue;
-    padding: 2px;
-    margin: 2px;
+    padding: 10px;
+    margin: 10px;
     list-style-type: none;
     flex: 1;
+}
+
+#messages textarea{
+    margin: 50px;
+    padding: 15px;
 }
