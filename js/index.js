@@ -27,7 +27,7 @@ const messageForm = document.querySelector("[name='leave_message']");
 
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    let name = event.target.userName.value;
+    let name = event.target.usersName.value;
     let email = event.target.UsersEmail.value;
     let message = event.target.usersMessage.value;
 
@@ -37,16 +37,15 @@ messageForm.addEventListener("submit", (event) => {
     let messageSection = document.getElementById("messages");
     const messageList = messageSection.querySelector("ul");
     const newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href="malito: ${email}">${name} </a><span>wrote: ${message} </span>`
+    newMessage.innerHTML = `<a href="mailto: ${email}">${name} </a><span>wrote: ${message} </span>`
     messageForm.reset();
 
-    const removeButton = document.createElement("BUTTON");
-    removeButton.innerText = "Remove";
 })
 
 
 
-
+const removeButton = document.createElement("BUTTON");
+removeButton.innerText = "Remove";
 
 function onRemoveButton(event){
     const entry = event.target.parentNode;
@@ -54,9 +53,7 @@ function onRemoveButton(event){
     removeButton.setAttribute("type", "button");
     removeButton.addEventListener("click", onRemoveButton);
 
-    
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage); 
 }
 
-
-newMessage.appendChild(removeButton);
-messageList.appendChild(newMessage);
