@@ -24,6 +24,8 @@ for (let skill of skillsList){
 
 const messageForm = document.querySelector("[name='leave_message']");
 
+const removeButton = document.createElement("BUTTON");
+removeButton.innerText = "Remove";
 
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -40,8 +42,6 @@ messageForm.addEventListener("submit", (event) => {
     newMessage.innerHTML = `<a href="mailto: ${email}">${name} </a><span>wrote: ${message} </span>`
     messageForm.reset();
     
-    const removeButton = document.createElement("BUTTON");
-    removeButton.innerText = "Remove";
 
     function onRemoveButton(event){
         const entry = event.target.parentNode;
