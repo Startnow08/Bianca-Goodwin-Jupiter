@@ -95,3 +95,21 @@ h2 {
     margin: 50px;
     padding: 15px;
 }
+
+c#skills ul{
+    display: flex; 
+    flex-direction: column;
+    color:white;
+    gap: 2px;
+    list-style:none;
+    background: #3399ff;
+}
+
+#projects ul{
+    display: flex; 
+    flex-direction: column-reverse;
+    color:white;
+    gap: 2px;
+    list-style:none;
+    background: #3399ff;
+}
