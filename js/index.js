@@ -71,8 +71,6 @@ fetch('https://api.github.com/users/Startnow08/repos')
     console.log("data: ", data);
     repositories = [...data];
     console.log("repositories: ", repositories);
- })
- .catch(error => console.error(error))
 
  let projectSection = document.getElementById("projects");
  let projectList = projectSection.querySelector("ul");
@@ -81,5 +79,8 @@ fetch('https://api.github.com/users/Startnow08/repos')
     let project = document.createElement("li");
     project.innerText = repositories[i];
     console.log(project);
-    projectList[0].appendChild(project);
+    projectList.appendChild(project);
  }
+
+ })
+ .catch(error => console.error(error))
