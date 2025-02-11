@@ -77,7 +77,7 @@ fetch('https://api.github.com/users/Startnow08/repos')
 
  for (let i = 0; i < repositories.length; i++){
     let project = document.createElement("li");
-    project.innerText = repositories[i];
+    project.innerText = repositories[i].name;
     console.log(project);
     projectList.appendChild(project);
  }
