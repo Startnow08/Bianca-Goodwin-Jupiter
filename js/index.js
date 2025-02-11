@@ -58,3 +58,17 @@ messageForm.addEventListener("submit", (event) => {
     messageForm.reset();
 })
 
+fetch('https://api.github.com/users/Startnow08/repos')
+.then(response => response.json())
+ .then(data => console.log(data))
+ .catch(error => console.error(error))
+
+ let projectSection = getElementById("projects");
+
+ let projectList = querySelector(projectSection);
+
+ for (item in projectList){
+    let project = createElement(li);
+    project.innerText = projectList[i];
+    projectSection.appendChild();
+ }
