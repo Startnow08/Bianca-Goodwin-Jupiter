@@ -75,11 +75,11 @@ fetch('https://api.github.com/users/Startnow08/repos')
  .catch(error => console.error(error))
 
  let projectSection = document.getElementById("projects");
- let projectList = projectSection.getElementsByTagName("ul");
+ let projectList = projectSection.querySelector("ul");
 
  for (let i = 0; i < repositories.length; i++){
     let project = document.createElement("li");
-    project.innerText = repsoitories[i];
+    project.innerText = repositories[i];
     console.log(project);
     projectList[0].appendChild(project);
  }
