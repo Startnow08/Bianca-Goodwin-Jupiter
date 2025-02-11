@@ -57,18 +57,29 @@ messageForm.addEventListener("submit", (event) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 })
+let repositories = [];
 
 fetch('https://api.github.com/users/Startnow08/repos')
-.then(response => response.json())
- .then(data => console.log(data))
+.then(response => {
+    if (!response.ok) {
+        throw new Error("Request failed");
+    }
+    return response.json();
+})
+   
+ .then(data => {
+    console.log("data: ", data);
+    repositories = [...data];
+    console.log("repositories: ", repositories);
+ })
  .catch(error => console.error(error))
 
- let projectSection = getElementById("projects");
+ let projectSection = document.getElementById("projects");
+ let projectList = projectSection.getElementsByTagName("ul");
 
- let projectList = querySelector(projectSection);
-
- for (item in projectList){
-    let project = createElement(li);
-    project.innerText = projectList[i];
-    projectSection.appendChild();
+ for (let i = 0; i < repositories.length; i++){
+    let project = document.createElement("li");
+    project.innerText = repsoitories[i];
+    console.log(project);
+    projectList[0].appendChild(project);
  }
