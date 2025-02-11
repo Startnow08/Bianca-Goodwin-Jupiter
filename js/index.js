@@ -7,7 +7,7 @@ body.appendChild(footer)
 const today = new Date();
 const year = today.getFullYear();
 const copyright = document.createElement('p')
-copyright.innerHTML = `<span>&#169 ${year} Bianca<\span>`
+copyright.innerHTML = `<span>&#169 ${year} Bianca<span>`
 footer.appendChild(copyright)
 
 //populate the skills list
@@ -28,8 +28,9 @@ const messageForm = document.querySelector("[name='leave_message']");
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
     let name = event.target.usersName.value;
-    let email = event.target.UsersEmail.value;
+    let email = event.target.usersEmail.value;
     let message = event.target.usersMessage.value;
+ 
 
     console.log("Name:", name);
     console.log("Email:", email);
@@ -37,22 +38,23 @@ messageForm.addEventListener("submit", (event) => {
     let messageSection = document.getElementById("messages");
     const messageList = messageSection.querySelector("ul");
     const newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href="mailto: ${email}">${name} </a><span>wrote: ${message} </span>`
-    messageForm.reset();
+    newMessage.innerHTML = `<a href="mailto: ${email}">${name} </a><span>wrote: ${message} <span>`
+    
     
     const removeButton = document.createElement("BUTTON");
+    removeButton.setAttribute("type", "button");
     removeButton.innerText = "Remove";
+
 
     function onRemoveButton(event){
         const entry = event.target.parentNode;
         entry.remove();
-        removeButton.setAttribute("type", "button");
-        removeButton.addEventListener("click", onRemoveButton);
-    
-  
     }
 
+    removeButton.addEventListener("click", onRemoveButton);
+    
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+    messageForm.reset();
 })
 

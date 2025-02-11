@@ -18,7 +18,7 @@
                 <li><a href="#connect">Connect</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#messages">Leave a Message</a></li>
+                <li><a href="#MessageForm">Leave a Message</a></li>
             </ul>
         </nav>
         <section id="name">
@@ -54,7 +54,7 @@
 
         <section id="projects">
             <h2>Projects</h2>
-        </section id= "messages">
+        </section id= "message">
             <h2>Leave a Message</h2>
             <form id="MessageForm" name="leave_message" autocomplete="on">
                 <label for="usersNameId">Users Name:</label>
@@ -67,14 +67,13 @@
                 <label for="emailID">Email: </label>
                 <input
                 type="email"
-                name="UsersEmail"
+                name="usersEmail"
                 id="emailID"
                 required
                 autocomplete="on"
                 /> <br />
                 <label for="usersMessageID">Users Message: </label>
                 <textarea
-                    type="text"
                     name="usersMessage"
                     required
                     ></textarea>
@@ -82,13 +81,11 @@
                         submit
                     </button>
             </form>
-        <section>
+        </section>
 
         <section id="messages">
             <h2>Messages</h2>
-            <div class="message-container">
                 <ul></ul>
-            </div>
         </section>
     
         <script src="js/index.js"></script>
