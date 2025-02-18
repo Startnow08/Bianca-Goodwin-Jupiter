@@ -3,6 +3,7 @@ body {
     background-color: lightblue;
     color: white;
     font-family: Helvetica, "Times New Roman", sans-serif;
+    
 
 
     /*phone*/
@@ -24,7 +25,7 @@ body {
         }
 
     /*tablet*/
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
         body {
         margin: 8px;
         color: white;
@@ -34,7 +35,9 @@ body {
             color: gray;
         }
         #name{
-            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 100;
+            font-size: 50px;
             color: rgb(29, 46, 200);
         }
         }
@@ -42,8 +45,10 @@ body {
 
 
 section{
-    margin: 10px;
+    margin: 50px;
     padding: 20px;
+    font-size: x-large;
+    
 }
 
 #connect ul{
@@ -53,6 +58,7 @@ section{
     gap: 2px;
     list-style:none;
     background: #3399ff;
+    padding: 100px;
 }
 
 #connect ul li{
@@ -60,15 +66,20 @@ section{
     width: 10px;
     height: 15px;
     border-radius: 11%;
-    margin: 9px;
+    margin-left: 300px;
+    margin-bottom: 20px;
     padding: 20px;
-    font-size: smaller;
+    font-size: large;
 }
 h1{
     font-weight: 300;
     font-family: sans-serif;
+    font-size: 100px;
+    color: blue;
+    margin-left: 350px;
 }
 h2 {
+    margin-left: 600px;
     font-size: 28px;
     font-weight: bold;
     color:aliceblue;
@@ -76,10 +87,10 @@ h2 {
 
 #experience ul{
     display: flex; 
-    font-size: 10px;
+    font-size: 25px;
     list-style:none;
     background: #3399ff;
-    padding: 5px;
+    padding: 100px;
 }
 
 #experience ul li{
@@ -89,9 +100,72 @@ h2 {
     margin: 10px;
     list-style-type: none;
     flex: 1;
+    margin-left: 75px;
+}
+p{
+    margin-left: 74px;
+}
+#messages ul{
+    margin: 50px;
+    padding: 50px;
 }
 
-#messages textarea{
-    margin: 50px;
-    padding: 15px;
+#MessageForm{
+    margin-left: 500px;
+    padding: 50px;
+
+}
+
+
+#skills ul{
+    display: flex; 
+    flex-direction: row;
+    color:white;
+    gap: 350px;
+    list-style:none;
+    background: #3399ff;
+    padding: 100px
+}
+
+#skills li{
+    margin-left: 50px;
+}
+
+
+#projects ul{
+    display: flex; 
+    flex-direction: row;
+    color:white;
+    gap: 45px;
+    list-style:none;
+    background: #3399ff;
+    padding: 100px;
+}
+
+#navigation ul{
+    margin-left: 125px;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    border-radius: 4px;
+    border-color: aliceblue;
+}
+
+img{
+    margin-left: 75px;
+}
+#usersNameId{
+    height: 30px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+#emailID{
+    height: 30px;
+    width: 350px;
+    margin-top: 5px;
+}
+textarea{
+    height: 100px;
+    width: 400px;
+    margin-right: 500px;
 }
